@@ -1,0 +1,13 @@
+{
+  "printWidth": 80,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ],
+  "trailingComma": "none"
+}

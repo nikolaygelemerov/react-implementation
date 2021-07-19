@@ -44,7 +44,7 @@ const MyReact = (Component) => {
      * @method resetIndexes
      *
      */
-    async resetIndexes() {
+    resetIndexes() {
       useStateIndex = 0;
       useLayoutEffectIndex = 0;
       useEffectIndex = 0;
@@ -272,7 +272,7 @@ const MyReact = (Component) => {
 
         return fn;
       }
-    },
+    }
   };
 
   return react;
