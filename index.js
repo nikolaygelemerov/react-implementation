@@ -272,7 +272,7 @@ const MyReact = (Component) => {
 
         return fn;
       }
-    }
+    },
   };
 
   return react;
@@ -305,13 +305,13 @@ const Counter = ({ useCallback, useEffect, useLayoutEffect, useState }) => {
     setColor('yellow');
 
     return () => {
-      // console.log('color: ', color);
+      console.log('color: ', color);
     };
   }, [color]);
 
-  // useLayoutEffect(() => {
-  //   setColor('blue');
-  // }, [color]);
+  useLayoutEffect(() => {
+    setColor('blue');
+  }, [color]);
 
   useEffect(() => {
     // Select buttons
@@ -329,21 +329,21 @@ const Counter = ({ useCallback, useEffect, useLayoutEffect, useState }) => {
     buttonToggle.addEventListener('click', toggleListener);
   });
 
-  // useEffect(() => {
-  //   console.log('useEffect countOne: ', countOne);
+  useEffect(() => {
+    console.log('useEffect countOne: ', countOne);
 
-  //   return () => {
-  //     console.log('return useEffect countOne: ', countOne);
-  //   };
-  // }, [countOne]);
+    return () => {
+      console.log('return useEffect countOne: ', countOne);
+    };
+  }, [countOne]);
 
-  // useEffect(() => {
-  //   console.log('useEffect countTwo: ', countTwo);
+  useEffect(() => {
+    console.log('useEffect countTwo: ', countTwo);
 
-  //   return () => {
-  //     console.log('return useEffect countTwo: ', countTwo);
-  //   };
-  // }, [countTwo]);
+    return () => {
+      console.log('return useEffect countTwo: ', countTwo);
+    };
+  }, [countTwo]);
 
   console.log('render:', { countOne, countTwo, color });
 
